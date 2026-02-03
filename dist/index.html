@@ -53,9 +53,23 @@
       }
       .actions {
         display: flex;
-        flex-wrap: wrap;
-        gap: 16px;
-        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+      }
+      .action-card {
+        width: 100%;
+        padding: 16px;
+        border: 1px solid rgba(141, 212, 255, 0.35);
+        border-radius: 16px;
+        background: rgba(8, 14, 32, 0.35);
+      }
+      .action-card h2 {
+        margin: 0 0 8px;
+        font-size: 1.2rem;
+      }
+      .action-card p {
+        margin-bottom: 12px;
       }
       esp-web-install-button {
         --esp-tools-button-color: #0b1020;
@@ -106,11 +120,28 @@
         </div>
         <ol>
           <li>Connect the Presence Sensor board via USB.</li>
-          <li>Click the button below and follow the prompts.</li>
+          <li>Choose the install mode below and follow the prompts.</li>
           <li>Wait for the flash to complete before disconnecting.</li>
         </ol>
         <div class="actions">
-          <esp-web-install-button manifest="./manifest.json"></esp-web-install-button>
+          <div class="action-card">
+            <h2>Wipe &amp; Install (factory)</h2>
+            <p>
+              Best for a fresh install or when you want to reset everything.
+              This will erase the device during setup and flash the full factory
+              image.
+            </p>
+            <esp-web-install-button manifest="./manifest-wipe.json"></esp-web-install-button>
+          </div>
+          <div class="action-card">
+            <h2>Update (keep Wi-Fi)</h2>
+            <p>
+              Updates only the application partitions, leaving NVS intact so
+              Wi-Fi credentials and provisioning stay in place. No erase prompt
+              is required.
+            </p>
+            <esp-web-install-button manifest="./manifest-keep.json"></esp-web-install-button>
+          </div>
         </div>
         <p class="footer">
           Having trouble? Make sure no other apps are using the serial port and
