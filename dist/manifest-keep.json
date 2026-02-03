@@ -3,6 +3,7 @@
   "version": "2026.02.03193919",
   "home_assistant_domain": "esphome",
   "new_install_prompt_erase": false,
+  "new_install_prevent_erase": true,
   "builds": [
     {
       "chipFamily": "ESP32",
