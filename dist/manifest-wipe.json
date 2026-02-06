@@ -1,6 +1,6 @@
 {
   "name": "Presence Sensor ESP32",
-  "version": "2026.02.05194900",
+  "version": "2026.02.06010419",
   "home_assistant_domain": "esphome",
   "new_install_prompt_erase": true,
   "builds": [
@@ -10,12 +10,12 @@
         {
           "path": "firmware.factory.bin",
           "offset": 0,
-          "md5": "9f332bb04df03d756959d7d0f30b8fcb"
+          "md5": "e05cc874c02f3b13c8208d654c7ed34b"
         }
       ],
       "ota": {
         "path": "firmware.ota.bin",
-        "md5": "5ba1f88c3170cdcd7fac7982ab0fc596"
+        "md5": "fb99d33bf5cb11b8a297bb85edc50a4e"
       }
     }
   ]
