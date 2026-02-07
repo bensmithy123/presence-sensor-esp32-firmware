@@ -123,6 +123,7 @@
           <li>Choose the install mode below and follow the prompts.</li>
           <li>Wait for the flash to complete before disconnecting.</li>
         </ol>
+
         <div class="actions">
           <div class="action-card">
             <h2>Wipe &amp; Install (factory)</h2>
@@ -133,22 +134,24 @@
             </p>
             <esp-web-install-button manifest="./manifest-wipe.json"></esp-web-install-button>
           </div>
+
           <div class="action-card">
             <h2>Update (keep Wi-Fi)</h2>
             <p>
-              Updates only the application partitions, leaving NVS intact so
-              Wi-Fi credentials and provisioning stay in place. No erase prompt
-              is required.
+              Updates only the application firmware, keeping NVS intact so Wi-Fi
+              credentials and provisioning remain in place. No erase prompt is required.
             </p>
             <esp-web-install-button manifest="./manifest-keep.json"></esp-web-install-button>
           </div>
         </div>
+
         <p class="footer">
           Having trouble? Make sure no other apps are using the serial port and
           try a different USB cable if the device does not appear.
         </p>
       </div>
     </main>
+
     <script
       type="module"
       src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module"
