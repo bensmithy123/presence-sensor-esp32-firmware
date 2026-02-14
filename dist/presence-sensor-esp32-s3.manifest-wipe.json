@@ -5,7 +5,7 @@
   "new_install_prompt_erase": true,
   "builds": [
     {
-      "chipFamily": "ESP32",
+      "chipFamily": "ESP32-S3",
       "parts": [
         {
           "path": "presence-sensor-esp32-s3.factory.bin",
