@@ -8,14 +8,14 @@
       "chipFamily": "ESP32",
       "parts": [
         {
-          "path": "presence-sensor-esp32.factory.bin",
+          "path": "presence-sensor-esp32-s3.factory.bin",
           "offset": 0,
-          "md5": "55197644b214c00641d5093474bca60b"
+          "md5": "4f7fa6c607ece46168fa324e56ad7cb1"
         }
       ],
       "ota": {
-        "path": "presence-sensor-esp32.ota.bin",
-        "md5": "65f96c2b3a84dafabbdfe057f2d60557"
+        "path": "presence-sensor-esp32-s3.ota.bin",
+        "md5": "4b38bf3e6b8ecee39054e05080194ae2"
       }
     }
   ]

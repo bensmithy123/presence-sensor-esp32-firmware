@@ -68,6 +68,10 @@
         margin: 0 0 8px;
         font-size: 1.2rem;
       }
+      .action-card h3 {
+        margin: 0 0 8px;
+        font-size: 1rem;
+      }
       .action-card p {
         margin-bottom: 12px;
       }
@@ -120,30 +124,11 @@
         </div>
         <ol>
           <li>Connect the Presence Sensor board via USB.</li>
-          <li>Choose the install mode below and follow the prompts.</li>
+          <li>Choose your board and install mode below.</li>
           <li>Wait for the flash to complete before disconnecting.</li>
         </ol>
 
-        <div class="actions">
-          <div class="action-card">
-            <h2>Wipe &amp; Install (factory)</h2>
-            <p>
-              Best for a fresh install or when you want to reset everything.
-              This will erase the device during setup and flash the full factory
-              image.
-            </p>
-            <esp-web-install-button manifest="./manifest-wipe.json"></esp-web-install-button>
-          </div>
-
-          <div class="action-card">
-            <h2>Update (keep Wi-Fi)</h2>
-            <p>
-              Updates only the application firmware, keeping NVS intact so Wi-Fi
-              credentials and provisioning remain in place. No erase prompt is required.
-            </p>
-            <esp-web-install-button manifest="./manifest-keep.json"></esp-web-install-button>
-          </div>
-        </div>
+        <div class="actions" id="firmware-actions"></div>
 
         <p class="footer">
           Having trouble? Make sure no other apps are using the serial port and
@@ -152,9 +137,62 @@
       </div>
     </main>
 
+    <template id="firmware-template">
+      <div class="action-card">
+        <h2 class="firmware-name"></h2>
+
+        <h3>Wipe &amp; Install (factory)</h3>
+        <p>
+          Best for a fresh install or when you want to reset everything. This
+          will erase the device during setup and flash the full factory image.
+        </p>
+        <esp-web-install-button class="wipe-button"></esp-web-install-button>
+
+        <h3>Update (keep Wi-Fi)</h3>
+        <p>
+          Updates only the application firmware, keeping NVS intact so Wi-Fi
+          credentials and provisioning remain in place. No erase prompt is
+          required.
+        </p>
+        <esp-web-install-button class="keep-button"></esp-web-install-button>
+      </div>
+    </template>
+
     <script
       type="module"
       src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module"
     ></script>
+    <script>
+      const titleFromName = (name) => name.replace(/-/g, " ").toUpperCase();
+
+      async function renderFirmwares() {
+        const response = await fetch("./manifest-index.json", { cache: "no-store" });
+        if (!response.ok) {
+          throw new Error(`Unable to load manifest index (${response.status})`);
+        }
+
+        const payload = await response.json();
+        const entries = payload.firmwares || [];
+        const actions = document.getElementById("firmware-actions");
+        const template = document.getElementById("firmware-template");
+
+        for (const entry of entries) {
+          const fragment = template.content.cloneNode(true);
+          fragment.querySelector(".firmware-name").textContent = titleFromName(entry.name);
+          fragment
+            .querySelector(".wipe-button")
+            .setAttribute("manifest", `./${entry.wipe_manifest}`);
+          fragment
+            .querySelector(".keep-button")
+            .setAttribute("manifest", `./${entry.keep_manifest}`);
+          actions.appendChild(fragment);
+        }
+      }
+
+      renderFirmwares().catch((error) => {
+        const actions = document.getElementById("firmware-actions");
+        actions.innerHTML = `<p>Unable to load firmware list: ${error.message}</p>`;
+      });
+    </script>
   </body>
 </html>

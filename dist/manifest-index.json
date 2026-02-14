@@ -1,0 +1,14 @@
+{
+  "firmwares": [
+    {
+      "name": "presence-sensor-esp32-s3",
+      "wipe_manifest": "presence-sensor-esp32-s3.manifest-wipe.json",
+      "keep_manifest": "presence-sensor-esp32-s3.manifest-keep.json"
+    },
+    {
+      "name": "presence-sensor-esp32",
+      "wipe_manifest": "presence-sensor-esp32.manifest-wipe.json",
+      "keep_manifest": "presence-sensor-esp32.manifest-keep.json"
+    }
+  ]
+}
