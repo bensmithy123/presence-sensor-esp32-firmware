@@ -57,6 +57,25 @@
         gap: 20px;
         align-items: flex-start;
       }
+      .board-section {
+        margin: 8px 0 24px;
+        padding: 16px;
+        border-radius: 14px;
+        border: 1px solid rgba(141, 212, 255, 0.35);
+        background: rgba(8, 14, 32, 0.35);
+      }
+      .board-section h2 {
+        margin: 0 0 10px;
+        font-size: 1.1rem;
+      }
+      .board-section ul {
+        margin: 0;
+        padding-left: 20px;
+        color: #c9d1ff;
+      }
+      .board-section li {
+        margin-bottom: 8px;
+      }
       .action-card {
         width: 100%;
         padding: 16px;
@@ -127,6 +146,15 @@
           <li>Choose your board and install mode below.</li>
           <li>Wait for the flash to complete before disconnecting.</li>
         </ol>
+
+        <section class="board-section">
+          <h2>Board flash targets</h2>
+          <ul>
+            <li><strong>ESP32 DevKit:</strong> Standard ESP32 build.</li>
+            <li><strong>ESP32-S3 DevKit:</strong> S3 build with PIR input support.</li>
+            <li><strong>ESP32-C3 DevKitM-1:</strong> New C3 build with LD2410 UART on GPIO7/6, I2C on GPIO4/5, and reserved LD2450 UART pins on GPIO19/18.</li>
+          </ul>
+        </section>
 
         <div class="actions" id="firmware-actions"></div>
 

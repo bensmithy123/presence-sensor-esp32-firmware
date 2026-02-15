@@ -1,6 +1,12 @@
 {
   "firmwares": [
     {
+      "name": "presence-sensor-esp32-c3",
+      "chip_family": "ESP32-C3",
+      "wipe_manifest": "presence-sensor-esp32-c3.manifest-wipe.json",
+      "keep_manifest": "presence-sensor-esp32-c3.manifest-keep.json"
+    },
+    {
       "name": "presence-sensor-esp32-s3",
       "chip_family": "ESP32-S3",
       "wipe_manifest": "presence-sensor-esp32-s3.manifest-wipe.json",
