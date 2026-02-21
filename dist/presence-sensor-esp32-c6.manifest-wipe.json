@@ -1,6 +1,6 @@
 {
   "name": "presence-sensor-esp32-c6",
-  "version": "2026.02.17193632",
+  "version": "2026.02.21203442",
   "home_assistant_domain": "esphome",
   "new_install_prompt_erase": true,
   "builds": [
@@ -10,12 +10,12 @@
         {
           "path": "presence-sensor-esp32-c6.factory.bin",
           "offset": 0,
-          "md5": "0411f6b0673f394af7220d273016e9ac"
+          "md5": "d31fc2956a187a011d1ee1b89e52a83c"
         }
       ],
       "ota": {
         "path": "presence-sensor-esp32-c6.ota.bin",
-        "md5": "20f0ba56a609847fa0437990f55c7650"
+        "md5": "f9f36817be94e549b67d9509e3950673"
       }
     }
   ]
