@@ -1,10 +1,10 @@
 {
   "firmwares": [
     {
-      "name": "presence-sensor-esp32-c6",
+      "name": "presence-sensor-esp32-c6-c4001",
       "chip_family": "ESP32-C6",
-      "wipe_manifest": "presence-sensor-esp32-c6.manifest-wipe.json",
-      "keep_manifest": "presence-sensor-esp32-c6.manifest-keep.json"
+      "wipe_manifest": "presence-sensor-esp32-c6-c4001.manifest-wipe.json",
+      "keep_manifest": "presence-sensor-esp32-c6-c4001.manifest-keep.json"
     }
   ]
 }
