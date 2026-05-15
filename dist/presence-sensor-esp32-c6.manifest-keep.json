@@ -1,5 +1,5 @@
 {
-  "name": "presence-sensor-esp32-c6-c4001",
+  "name": "presence-sensor-esp32-c6",
   "version": "2026.05.14234209",
   "home_assistant_domain": "esphome",
   "new_install_prompt_erase": false,
@@ -8,14 +8,14 @@
       "chipFamily": "ESP32-C6",
       "parts": [
         {
-          "path": "presence-sensor-esp32-c6-c4001.ota.bin",
+          "path": "presence-sensor-esp32-c6.ota.bin",
           "offset": 65536,
-          "md5": "fe9875bac035fd80c44e44ac1b1c909c"
+          "md5": "910faf6d86b3d6c26242335312be5427"
         }
       ],
       "ota": {
-        "path": "presence-sensor-esp32-c6-c4001.ota.bin",
-        "md5": "fe9875bac035fd80c44e44ac1b1c909c"
+        "path": "presence-sensor-esp32-c6.ota.bin",
+        "md5": "910faf6d86b3d6c26242335312be5427"
       }
     }
   ]

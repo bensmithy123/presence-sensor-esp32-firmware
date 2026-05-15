@@ -1,0 +1,22 @@
+{
+  "name": "presence-sensor-esp32-c3",
+  "version": "2026.05.14234209",
+  "home_assistant_domain": "esphome",
+  "new_install_prompt_erase": false,
+  "builds": [
+    {
+      "chipFamily": "ESP32-C3",
+      "parts": [
+        {
+          "path": "presence-sensor-esp32-c3.ota.bin",
+          "offset": 65536,
+          "md5": "045e813ad9b61ab7b5bcaff1e4cdf928"
+        }
+      ],
+      "ota": {
+        "path": "presence-sensor-esp32-c3.ota.bin",
+        "md5": "045e813ad9b61ab7b5bcaff1e4cdf928"
+      }
+    }
+  ]
+}
