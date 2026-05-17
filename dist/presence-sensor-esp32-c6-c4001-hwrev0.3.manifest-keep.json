@@ -1,6 +1,6 @@
 {
   "name": "presence-sensor-esp32-c6-c4001-hwrev0.3",
-  "version": "2026.05.17141248",
+  "version": "2026.05.17163930",
   "home_assistant_domain": "esphome",
   "new_install_prompt_erase": false,
   "builds": [
@@ -10,12 +10,12 @@
         {
           "path": "presence-sensor-esp32-c6-c4001-hwrev0.3.ota.bin",
           "offset": 65536,
-          "md5": "a6a8065e0284edbb8b0db2e6fc1a127a"
+          "md5": "0c9e8ea650cc963474fadf4c150c1da4"
         }
       ],
       "ota": {
         "path": "presence-sensor-esp32-c6-c4001-hwrev0.3.ota.bin",
-        "md5": "a6a8065e0284edbb8b0db2e6fc1a127a"
+        "md5": "0c9e8ea650cc963474fadf4c150c1da4"
       }
     }
   ]
